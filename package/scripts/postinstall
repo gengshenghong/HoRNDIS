@@ -2,5 +2,7 @@
 # Cleans-up after the old HoRDNIS installations.
 # These would install into both /Library/Extensions and 
 # /System/Library/Extensions, while we only use the former location.
-sudo rm -rf /System/Library/Extensions/HoRNDIS.kext
-sudo touch /System/Library/Extensions
+#sudo rm -rf /System/Library/Extensions/HoRNDIS.kext
+#sudo touch /System/Library/Extensions
+# https://github.com/jwise/HoRNDIS/issues/102
+sudo kextcache -system-prelinked-kernel
